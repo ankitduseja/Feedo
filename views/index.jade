@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	div
+		div(class="wrapper")
+			div(class="wrapperclose") x
+	div(class="maincontent")
+		div(id="main")
+			header
+				h1= title
+				p Welcome to #{title}
+			div
+				ul(class="alist")
+					each article, i in articles
+						li(id="l"+ pageno +i,class="a_l")
+							div(id="d"+pageno+i,class="a_d")
+								h2(id="h"+pageno+i)= article.description.split(' ').slice(0,10).join(' ')
+								div(id="date"+pageno+i,class="a_date")
+								div(id="c"+pageno+i,class="a_c")= article.description
+			div(id="loadMore") More
+		footer &copy; 2014 Feedo. Developed by Ankit Duseja.

@@ -1,0 +1,6 @@
+each article, i in articles
+	li(id="l"+ pageno +i,class="a_l")
+		div(id="d"+pageno+i,class="a_d")
+			h2(id="h"+pageno+i)= article.description.split(' ').slice(0,10).join(' ')
+			div(id="date"+pageno+i,class="a_date")
+			div(id="c"+pageno+i,class="a_c")= article.description
